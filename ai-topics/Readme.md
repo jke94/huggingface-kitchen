@@ -20,6 +20,8 @@ Useful links to understand ai in the present.
 
 - [Huggingface blog: Stable Diffusion with 🧨 Diffusers ](https://huggingface.co/blog/stable_diffusion)
 
+- [AWS: ¿Qué es Stable Diffusion?](https://aws.amazon.com/es/what-is/stable-diffusion/)
+
 ## 2. LDM: Latent Diffusion Models
 
 - [OpenAI: CLIP](https://openai.com/research/clip)
