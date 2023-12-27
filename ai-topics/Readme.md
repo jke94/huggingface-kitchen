@@ -22,6 +22,8 @@ Useful links to understand ai in the present.
 
 - [AWS: ¿Qué es Stable Diffusion?](https://aws.amazon.com/es/what-is/stable-diffusion/)
 
+- [AprendeMachineLearning: Stable Diffusion](https://www.aprendemachinelearning.com/crea-imagenes-stable-diffusion-con-inteligencia-artificial-en-tu-ordenador/#more-7681)
+
 ## 2. LDM: Latent Diffusion Models
 
 - [OpenAI: CLIP](https://openai.com/research/clip)
