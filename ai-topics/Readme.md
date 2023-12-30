@@ -11,6 +11,7 @@ Useful links to understand ai in the present.
 | 3 | CLIP | Contrastive Language-Image Pre-Training |
 | 4 | ControlNet | ControlNet |
 | 5 | Stable Diffusion (VAE) | Stable Difusion Variational Autoencoder |
+| 6 | Safetensors | |
 
 ## 1. Diffusion Models
 
@@ -47,3 +48,9 @@ Useful links to understand ai in the present.
 - [Builtin: Stable Diffusion Variational Autoencoder](https://builtin.com/artificial-intelligence/stable-diffusion-vae)
 
 - [stable-diffusion-art: How to use VAE to improve eyes and faces](https://stable-diffusion-art.com/how-to-use-vae/)
+
+## 6. Safetensors
+
+- [Huggingface: Safetensors](https://huggingface.co/docs/safetensors/index)
+
+- [Medium: Safetensors: a simple, safe and faster way to store and distribute tensors.](https://medium.com/@mandalsouvik/safetensors-a-simple-and-safe-way-to-store-and-distribute-tensors-d9ba1931ba04)
