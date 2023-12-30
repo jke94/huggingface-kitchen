@@ -24,6 +24,8 @@ Useful links to understand ai in the present.
 
 - [AprendeMachineLearning: Stable Diffusion](https://www.aprendemachinelearning.com/crea-imagenes-stable-diffusion-con-inteligencia-artificial-en-tu-ordenador/#more-7681)
 
+- [towardsdatascience: Stable diffusion using Hugging Face](https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8)
+
 ## 2. LDM: Latent Diffusion Models
 
 - [OpenAI: CLIP](https://openai.com/research/clip)
