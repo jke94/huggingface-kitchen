@@ -6,12 +6,19 @@ Useful links to understand ai in the present.
 
 | Item | Concept | Meaning |
 | --- | --- | --- |
+| 0 | Transformers | attention is all you need |
 | 1 | Diffusion Models | |
 | 2 | LDM | Latent Diffusion Models |
 | 3 | CLIP | Contrastive Language-Image Pre-Training |
 | 4 | ControlNet | ControlNet |
 | 5 | Stable Diffusion (VAE) | Stable Difusion Variational Autoencoder |
 | 6 | Safetensors | |
+| 7 | LLL | Large Language Models |
+
+## 0. Transformers
+
+- [NVIDIA: ¿Qué es un Modelo Transformer?](https://la.blogs.nvidia.com/2022/04/19/que-es-un-modelo-transformer/)
+- [aprendemachinelearning: ¿Cómo funcionan los Transformers?: ](https://www.aprendemachinelearning.com/como-funcionan-los-transformers-espanol-nlp-gpt-bert/)
 
 ## 1. Diffusion Models
 
@@ -54,3 +61,7 @@ Useful links to understand ai in the present.
 - [Huggingface: Safetensors](https://huggingface.co/docs/safetensors/index)
 
 - [Medium: Safetensors: a simple, safe and faster way to store and distribute tensors.](https://medium.com/@mandalsouvik/safetensors-a-simple-and-safe-way-to-store-and-distribute-tensors-d9ba1931ba04)
+
+## 7. LLM (Large Language Models)
+
+- [AprendeMachineLearning: LLM: ¿Qué son los Grandes Modelos de Lenguaje?](https://www.aprendemachinelearning.com/llm-que-son-los-grandes-modelos-de-lenguaje/#more-8493)
