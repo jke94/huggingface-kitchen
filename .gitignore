@@ -161,3 +161,6 @@ cython_debug/
 
 # Conda Env
 .conda/
+
+# Images
+generated_images/
