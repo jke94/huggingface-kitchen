@@ -134,6 +134,12 @@ dependencies:
   - zlib=1.2.13=h8cc25b3_0
   - zstd=1.5.5=hd43e919_0
   - pip:
+      - diffusers==0.25.0
+      - fsspec==2023.12.2
+      - huggingface-hub==0.20.1
+      - regex==2023.12.25
+      - safetensors==0.4.1
       - torchaudio==2.1.2
       - torchvision==0.16.2
+      - tqdm==4.66.1
 prefix: C:\Users\javie\miniconda3\envs\segmind-vega-env
