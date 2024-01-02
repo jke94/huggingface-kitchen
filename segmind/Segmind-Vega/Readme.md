@@ -7,7 +7,6 @@
 
 ```
 conda create -n segmind-vega-env python=3.10
-
 ```
 
 ## 2. How to export **segmind-vega-env**.
@@ -30,7 +29,7 @@ conda env export > segmind-vega-env.yml
 conda remove --name segmind-vega-env --all
 ```
 
-## 4. How to create **** from conda environment file (*.yml).
+## 4. How to create **segmind-vega-env** from conda environment file (*.yml).
 
 ```
 conda env create -f segmind-vega-env.yml
