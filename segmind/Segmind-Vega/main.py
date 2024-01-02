@@ -26,7 +26,7 @@ def main(number_of_images:int, generated_images_folder_path:str):
         "segmind/Segmind-Vega", 
         torch_dtype=torch.float16, 
         use_safetensors=True, 
-        variant="fp16",
+        variant="fp16"
         )
 
     pipeline.to("cuda")
