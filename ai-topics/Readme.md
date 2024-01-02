@@ -12,8 +12,9 @@ Useful links to understand ai in the present.
 | 3 | CLIP | Contrastive Language-Image Pre-Training |
 | 4 | ControlNet | ControlNet |
 | 5 | Stable Diffusion (VAE) | Stable Difusion Variational Autoencoder |
-| 6 | Safetensors | |
+| 6 | Safetensors | - |
 | 7 | LLL | Large Language Models |
+| 8 | Stable Diffusion| - |
 
 ## 0. Transformers
 
@@ -25,14 +26,6 @@ Useful links to understand ai in the present.
 - [unite.ai: Modelos de difusión en IA: todo lo que necesita saber](https://www.unite.ai/es/modelos-de-difusi%C3%B3n-en-ai-todo-lo-que-necesitas-saber/)
 
 - [planetachatbot: ¿Qué son y cómo funcionan los modelos de difusión?](https://planetachatbot.com/que-son-y-como-funcionan-modelos-de-difusion/)
-
-- [Huggingface blog: Stable Diffusion with 🧨 Diffusers ](https://huggingface.co/blog/stable_diffusion)
-
-- [AWS: ¿Qué es Stable Diffusion?](https://aws.amazon.com/es/what-is/stable-diffusion/)
-
-- [AprendeMachineLearning: Stable Diffusion](https://www.aprendemachinelearning.com/crea-imagenes-stable-diffusion-con-inteligencia-artificial-en-tu-ordenador/#more-7681)
-
-- [towardsdatascience: Stable diffusion using Hugging Face](https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8)
 
 ## 2. LDM: Latent Diffusion Models
 
@@ -65,3 +58,15 @@ Useful links to understand ai in the present.
 ## 7. LLM (Large Language Models)
 
 - [AprendeMachineLearning: LLM: ¿Qué son los Grandes Modelos de Lenguaje?](https://www.aprendemachinelearning.com/llm-que-son-los-grandes-modelos-de-lenguaje/#more-8493)
+
+## 8. Stable Diffusion
+
+- [Félix Sanz: Cómo funciona Stable Diffusion: ](https://www.felixsanz.dev/es/articulos/como-funciona-stable-diffusion)
+
+- [Huggingface blog: Stable Diffusion with 🧨 Diffusers ](https://huggingface.co/blog/stable_diffusion)
+
+- [AWS: ¿Qué es Stable Diffusion?](https://aws.amazon.com/es/what-is/stable-diffusion/)
+
+- [AprendeMachineLearning: Stable Diffusion](https://www.aprendemachinelearning.com/crea-imagenes-stable-diffusion-con-inteligencia-artificial-en-tu-ordenador/#more-7681)
+
+- [towardsdatascience: Stable diffusion using Hugging Face](https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8)
