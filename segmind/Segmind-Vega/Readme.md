@@ -3,7 +3,7 @@
 - [Huggingface: segmind/Segmind-Vega](https://huggingface.co/segmind/Segmind-Vega)
 
 
-## 1. Create conda environment
+## 1. How to create conda **segmind-vega-env** environment
 
 ´´´
 conda create -n segmind-vega-env python=3.10
@@ -22,4 +22,16 @@ conda activate segmind-vega-env
 
 ```
 conda env export > segmind-vega-env.yml
+```
+
+# 3. How to delete **segmind-vega-env** environment.
+
+```
+conda remove --name segmind-vega-env --all
+```
+
+# 4. How to create **** from conda environment file (*.yml).
+
+```
+conda env create -f segmind-vega-env.yml
 ```
