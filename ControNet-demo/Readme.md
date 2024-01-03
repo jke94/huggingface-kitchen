@@ -1,6 +1,6 @@
-# Investigations about lllyasviel/ControlNet.
+# Investigations about lllyasviel/sd-controlnet-canny.
 
-- [Huggingface: lllyasviel/ControlNet](https://huggingface.co/lllyasviel/ControlNet)
+- [Huggingface: lllyasviel/sd-controlnet-canny](https://huggingface.co/lllyasviel/sd-controlnet-canny)
 
 ## 1. How to create conda **controlnet-demo-env** environment
 
