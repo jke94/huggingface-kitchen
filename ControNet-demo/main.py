@@ -68,14 +68,6 @@ def main():
     
     pipeline.to("cuda")
     
-    # pipeline.scheduler = UniPCMultistepScheduler.from_config(
-    #     pipeline.scheduler.config
-    # )
-
-    # pipeline.scheduler = EulerDiscreteScheduler.from_config(
-    #     pipeline.scheduler.config
-    # )
-    
     pipeline.scheduler = DPMSolverMultistepScheduler.from_config(
         pipeline.scheduler.config
     )
@@ -83,7 +75,7 @@ def main():
     # Inference arguments
 
     prompt = "bird"
-    negative_prompt = "dark style, bright colors"
+    negative_prompt = "dark style, bright colors, beautifull"
     num_inference_steps = 45
     strength=0.15
     guidance_scale=15.5
