@@ -1,6 +1,6 @@
 from diffusers import StableDiffusionControlNetPipeline
 from diffusers import ControlNetModel
-from diffusers import UniPCMultistepScheduler, KarrasVeScheduler
+from diffusers import UniPCMultistepScheduler, EulerDiscreteScheduler,DPMSolverMultistepScheduler
 from diffusers.utils import load_image
 from datetime import datetime
 import torch
@@ -68,10 +68,18 @@ def main():
     
     pipeline.to("cuda")
     
-    pipeline.scheduler = UniPCMultistepScheduler.from_config(
+    # pipeline.scheduler = UniPCMultistepScheduler.from_config(
+    #     pipeline.scheduler.config
+    # )
+
+    # pipeline.scheduler = EulerDiscreteScheduler.from_config(
+    #     pipeline.scheduler.config
+    # )
+    
+    pipeline.scheduler = DPMSolverMultistepScheduler.from_config(
         pipeline.scheduler.config
     )
-
+    
     # Inference arguments
 
     prompt = "bird"
