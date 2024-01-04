@@ -35,7 +35,7 @@ def generate_canny_image(image:Image) -> Image:
     
     return canny_image
 
-def main(input_image_path_name:str):
+def main(input_image_path_name:str, number_of_images:int):
     
     # Show CUDA information.
     
@@ -69,52 +69,70 @@ def main(input_image_path_name:str):
     
     # Inference arguments
 
-    prompt = "woodpecker, beautifull, exotic"
-    negative_prompt = "dark style, dark colors"
-    num_inference_steps = 45
-    strength=0.15
-    guidance_scale=15.5
+    prompts = {
+        "A" : "modern house design, wooden house, photorealistic, in the countryside",
+        "B" : "modern house design, wooden house, photorealistic, in the countryside",
+        "C" : "modern house design, wooden house, oil painting style, in the countryside",
+        "D" : "modern house design, oil painting style, in the city",
+        "E" : "modern house design, oil painting style, in the city, surrounded by buildings, sunrise",
+        "F" : "modern house design, Artstyle Graffiti, in the city, surrounded by buildings, sunrise",
+        "G" : "modern house design, pop art style, in the city, surrounded by buildings, summer",
+        "H" : "modern house design, Artstyle Graffiti, countryside, summer, beach",
+        "I" : "modern house design, Comic Book, countryside, summer, beach",
+    }
+
+    negative_prompts = {
+        "A" : "dark style, dark colors",
+        "B" : ": low quality, blurry, plastic, grainy, duplicate, [deformed | disfigured], poorly drawn, [bad : wrong] anatomy, [extra | missing | floating | disconnected] limb, bad proportions, (mutated hands and fingers), text, name, signature, watermark, logo, autograph, trademark, worst quality, jpeg artifacts, cut off, censored, bad anatomy, bad body, bad face, deformities, (boring, uninteresting:1.1)",
+    }
+    
+    num_inference_steps = 35
+    strength=0.35
+    guidance_scale=10.5
     generator = torch.Generator(device='cuda').manual_seed(random.randint(0, 1000))
     
     # Run inference.
     
-    generated_image = pipeline(
-        prompt=prompt,
-        negative_prompt=negative_prompt,
-        num_inference_steps=num_inference_steps, 
-        image=canny_image,
-        strength=strength,
-        guidance_scale=guidance_scale,
-        generator=generator
-    ).images[0]
+    for i in range(0, number_of_images):
     
-    # Create grid images with the images.
-    
-    output_image = make_image_grid([original_image, canny_image, generated_image], rows=1, cols=3)
-
-    # Save generated image.
-
-    generated_images_folder_path = "generated_images"
-    
-    date = datetime.now()    
-    file_name = f'generated_image_{date.strftime("%Y-%m-%d_%H-%M-%S")}.png'
-    file_path_name = os.path.join(generated_images_folder_path, file_name)
-
-    if not os.path.exists(generated_images_folder_path):
-        os.mkdir(generated_images_folder_path)
+        generated_image = pipeline(
+            prompt=prompts.get('I'),
+            negative_prompt=negative_prompts.get('B'),
+            num_inference_steps=num_inference_steps, 
+            image=canny_image,
+            strength=strength,
+            guidance_scale=guidance_scale,
+            generator=generator
+        ).images[0]
         
-    output_image.save(file_path_name)
-    
-    if os.path.isfile(file_path_name):
-        print(f'Image "{file_path_name}" has been saved.')
-    else:
-        print(f'ERROR, "{file_path_name}" has NOT been saved.')
+        # Create grid images with the images.
+        
+        output_image = make_image_grid([
+            original_image, canny_image, generated_image], rows=1, cols=3)
+
+        # Save generated image.
+
+        generated_images_folder_path = "generated_images"
+        
+        date = datetime.now()    
+        file_name = f'generated_image_{date.strftime("%Y-%m-%d_%H-%M-%S")}_{i}.png'
+        file_path_name = os.path.join(generated_images_folder_path, file_name)
+
+        if not os.path.exists(generated_images_folder_path):
+            os.mkdir(generated_images_folder_path)
+            
+        output_image.save(file_path_name)
+        
+        if os.path.isfile(file_path_name):
+            print(f'Image "{file_path_name}" has been saved.')
+        else:
+            print(f'ERROR, "{file_path_name}" has NOT been saved.')
 
 if __name__ == "__main__":
     
-    input_image_path_name = "./pajaro_carpintero_0.jpg"
+    input_image_path_name = "./images/house_1.jpg"
     
     if os.path.isfile(input_image_path_name):
-        main(input_image_path_name=input_image_path_name)
+        main(input_image_path_name=input_image_path_name, number_of_images=3)
     else:
         print(f'ERROR, input image: "{input_image_path_name}" not exists.')
