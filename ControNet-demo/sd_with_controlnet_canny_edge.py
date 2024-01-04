@@ -68,24 +68,9 @@ def main(input_image_path_name:str, number_of_images:int):
     )
     
     # Inference arguments
-
-    prompts = {
-        "A" : "modern house design, wooden house, photorealistic, in the countryside",
-        "B" : "modern house design, wooden house, photorealistic, in the countryside",
-        "C" : "modern house design, wooden house, oil painting style, in the countryside",
-        "D" : "modern house design, oil painting style, in the city",
-        "E" : "modern house design, oil painting style, in the city, surrounded by buildings, sunrise",
-        "F" : "modern house design, Artstyle Graffiti, in the city, surrounded by buildings, sunrise",
-        "G" : "modern house design, pop art style, in the city, surrounded by buildings, summer",
-        "H" : "modern house design, Artstyle Graffiti, countryside, summer, beach",
-        "I" : "modern house design, Comic Book, countryside, summer, beach",
-    }
-
-    negative_prompts = {
-        "A" : "dark style, dark colors",
-        "B" : ": low quality, blurry, plastic, grainy, duplicate, [deformed | disfigured], poorly drawn, [bad : wrong] anatomy, [extra | missing | floating | disconnected] limb, bad proportions, (mutated hands and fingers), text, name, signature, watermark, logo, autograph, trademark, worst quality, jpeg artifacts, cut off, censored, bad anatomy, bad body, bad face, deformities, (boring, uninteresting:1.1)",
-    }
     
+    prompt="modern house design, beautiful interior design, city, surrounded by buildings, sunrise"
+    negative_prompt="dark style, dark colors"
     num_inference_steps = 35
     strength=0.35
     guidance_scale=10.5
@@ -96,8 +81,8 @@ def main(input_image_path_name:str, number_of_images:int):
     for i in range(0, number_of_images):
     
         generated_image = pipeline(
-            prompt=prompts.get('I'),
-            negative_prompt=negative_prompts.get('B'),
+            prompt=prompt,
+            negative_prompt=negative_prompt,
             num_inference_steps=num_inference_steps, 
             image=canny_image,
             strength=strength,
