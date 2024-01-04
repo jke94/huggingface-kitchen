@@ -71,6 +71,7 @@ Useful links to understand ai in the present.
 
 - [towardsdatascience: Stable diffusion using Hugging Face](https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8)
 
+- [stable-diffusion-art: 106 styles for Stable Diffusion XL model](https://stable-diffusion-art.com/sdxl-styles/)
 
 ### Others.
 
