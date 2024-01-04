@@ -35,13 +35,15 @@ def generate_canny_image(image:Image) -> Image:
     
     return canny_image
 
-def main():
+def main(input_image_path_name:str):
     
-    image_file = "./pajaro_carpintero_0.jpg"
+    # Show CUDA information.
+    
+    show_CUDA_information()
     
     # Generate canny image
     
-    original_image = load_image(image_file)
+    original_image = load_image(input_image_path_name)
     canny_image = generate_canny_image(image=original_image)
     
     # Building ControlNetModel
@@ -102,7 +104,17 @@ def main():
         os.mkdir(generated_images_folder_path)
         
     output_image.save(file_path_name)
+    
+    if os.path.isfile(file_path_name):
+        print(f'Image "{file_path_name}" has been saved.')
+    else:
+        print(f'ERROR, "{file_path_name}" has NOT been saved.')
 
 if __name__ == "__main__":
     
-    main()
+    input_image_path_name = "./pajaro_carpintero_0.jpg"
+    
+    if os.path.isfile(input_image_path_name):
+        main(input_image_path_name=input_image_path_name)
+    else:
+        print(f'ERROR, input image: "{input_image_path_name}" not exists.')
