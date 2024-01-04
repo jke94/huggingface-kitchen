@@ -1,7 +1,8 @@
 from diffusers import StableDiffusionControlNetPipeline
 from diffusers import ControlNetModel
-from diffusers import UniPCMultistepScheduler, EulerDiscreteScheduler,DPMSolverMultistepScheduler
+from diffusers import DPMSolverMultistepScheduler
 from diffusers.utils import load_image
+from diffusers.utils import make_image_grid
 from datetime import datetime
 import torch
 import random
@@ -19,13 +20,11 @@ def show_CUDA_information():
     else:
         print('Cuda is not available.')
 
-def generate_canny_image( image_file:str, canny_image_name:str, 
-    save_canny_image:bool = True) -> Image: 
+def generate_canny_image(image:Image) -> Image: 
     
     # Load image.
-    
-    original_image = load_image(image_file)
-    image = np.array(original_image)
+
+    image = np.array(image)
 
     # Get canny image
     
@@ -34,22 +33,16 @@ def generate_canny_image( image_file:str, canny_image_name:str,
     image = np.concatenate([image, image, image], axis=2)
     canny_image = Image.fromarray(image)
     
-    if save_canny_image:
-        canny_image.save(f'{canny_image_name}')
-    
     return canny_image
 
 def main():
-   
+    
     image_file = "./pajaro_carpintero_0.jpg"
-    canny_image_name = './canny_image_pajaro_carpintero_0.png'
-    generated_image_name = "./output_pajaro_carpintero_0.png"
     
     # Generate canny image
     
-    canny_image = generate_canny_image(
-        image_file=image_file,
-        canny_image_name=canny_image_name)
+    original_image = load_image(image_file)
+    canny_image = generate_canny_image(image=original_image)
     
     # Building ControlNetModel
 
@@ -74,8 +67,8 @@ def main():
     
     # Inference arguments
 
-    prompt = "bird"
-    negative_prompt = "dark style, bright colors, beautifull"
+    prompt = "woodpecker, beautifull, exotic"
+    negative_prompt = "dark style, dark colors"
     num_inference_steps = 45
     strength=0.15
     guidance_scale=15.5
@@ -93,9 +86,22 @@ def main():
         generator=generator
     ).images[0]
     
-    # Save generated image.
+    # Create grid images with the images.
     
-    generated_image.save(generated_image_name)
+    output_image = make_image_grid([original_image, canny_image, generated_image], rows=1, cols=3)
+
+    # Save generated image.
+
+    generated_images_folder_path = "generated_images"
+    
+    date = datetime.now()    
+    file_name = f'generated_image_{date.strftime("%Y-%m-%d_%H-%M-%S")}.png'
+    file_path_name = os.path.join(generated_images_folder_path, file_name)
+
+    if not os.path.exists(generated_images_folder_path):
+        os.mkdir(generated_images_folder_path)
+        
+    output_image.save(file_path_name)
 
 if __name__ == "__main__":
     
