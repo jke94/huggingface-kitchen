@@ -70,3 +70,11 @@ Useful links to understand ai in the present.
 - [AprendeMachineLearning: Stable Diffusion](https://www.aprendemachinelearning.com/crea-imagenes-stable-diffusion-con-inteligencia-artificial-en-tu-ordenador/#more-7681)
 
 - [towardsdatascience: Stable diffusion using Hugging Face](https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8)
+
+- [stable-diffusion-art: 106 styles for Stable Diffusion XL model](https://stable-diffusion-art.com/sdxl-styles/)
+
+### Others.
+
+- [huggingface: kandinsky-community/kandinsky-3](kandinsky-community/kandinsky-3)
+
+- [stablecog: Models](https://stablecog.com/guide/models)
