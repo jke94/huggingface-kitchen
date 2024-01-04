@@ -6,7 +6,11 @@ Example using Stable Diffusion (v1.5) with ControlNet (with canny edge)
 
 ## A. Samples generated.
 
-TODO:
+![generated_image_2024-01-04_20-11-59_0](https://github.com/jke94/huggingface-kitchen/assets/53972851/7d7626c6-95af-4e5b-891d-6d1512751ff8)
+
+![generated_image_2024-01-04_20-05-19_0](https://github.com/jke94/huggingface-kitchen/assets/53972851/a93c8d0d-099e-4da7-97ad-d40b9a03b0de)
+
+![generated_image_2024-01-04_20-05-56_2](https://github.com/jke94/huggingface-kitchen/assets/53972851/5f98b9a2-69d3-4007-9c9d-83fed19b8352)
 
 ## B. Conda development environment
 
