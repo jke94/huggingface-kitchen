@@ -164,3 +164,9 @@ cython_debug/
 
 # Images
 generated_images/
+
+# Autotrain project files
+*_project*/
+
+# Autotrain fine-tunning images
+fine-tuning_images_*/
